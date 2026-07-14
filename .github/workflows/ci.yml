@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  generated:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: python3 scripts/update.py
+      - run: git diff --exit-code
+      - run: python3 -m json.tool packages.json >/dev/null
+      - run: python3 -m json.tool bucket/deepseek.json >/dev/null
+      - run: ruby -c Formula/deepseek.rb
+
+  homebrew:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v5
+      - run: brew style Formula/deepseek.rb
+      - run: brew audit --strict Formula/deepseek.rb

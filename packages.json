@@ -1,0 +1,12 @@
+{
+  "deepseek": {
+    "repository": "model-clis/deepseek",
+    "description": "Stateless DeepSeek subagent CLI",
+    "homepage": "https://github.com/model-clis/deepseek",
+    "license": "MIT",
+    "assets": {
+      "homebrew": "deepseek-macos-aarch64",
+      "scoop": "deepseek-windows-x86_64.exe"
+    }
+  }
+}
