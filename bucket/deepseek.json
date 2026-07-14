@@ -1,12 +1,12 @@
 {
-  "version": "2026.714.1",
+  "version": "2026.715.0",
   "description": "Stateless DeepSeek subagent CLI",
   "homepage": "https://github.com/model-clis/deepseek",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/model-clis/deepseek/releases/download/v2026.714.1/deepseek-windows-x86_64.exe",
-      "hash": "ad77e835cfdf0b5b95123a56ee9424875a3138e37de9124827e1cdcfd74669cf"
+      "url": "https://github.com/model-clis/deepseek/releases/download/v2026.715.0/deepseek-windows-x86_64.exe",
+      "hash": "d51133e81c27128c58817442d18c78a2ea6413ddcd49440c85b484f4d244244f"
     }
   },
   "bin": [
