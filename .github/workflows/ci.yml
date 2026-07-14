@@ -23,4 +23,5 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - run: brew style Formula/deepseek.rb
-      - run: brew audit --strict Formula/deepseek.rb
+      - run: brew tap model-clis/packages "$GITHUB_WORKSPACE"
+      - run: brew audit --strict model-clis/packages/deepseek
