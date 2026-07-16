@@ -8,5 +8,23 @@
       "homebrew": "deepseek-macos-aarch64",
       "scoop": "deepseek-windows-x86_64.exe"
     }
+  },
+  "kimi-code": {
+    "repository": "MoonshotAI/kimi-code",
+    "description": "AI coding agent for your terminal",
+    "homepage": "https://github.com/MoonshotAI/kimi-code",
+    "license": "MIT",
+    "tag_prefix": "@moonshot-ai/kimi-code@",
+    "scoop_bin_source": "kimi.exe",
+    "checkver": {
+      "url": "https://api.github.com/repos/MoonshotAI/kimi-code/releases",
+      "regex": "@moonshot-ai/kimi-code@([\\d.]+)"
+    },
+    "assets": {
+      "scoop": {
+        "64bit": "kimi-code-win32-x64.zip",
+        "arm64": "kimi-code-win32-arm64.zip"
+      }
+    }
   }
 }

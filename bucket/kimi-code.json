@@ -1,0 +1,42 @@
+{
+  "version": "0.26.0",
+  "description": "AI coding agent for your terminal",
+  "homepage": "https://github.com/MoonshotAI/kimi-code",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/MoonshotAI/kimi-code/releases/download/%40moonshot-ai/kimi-code%400.26.0/kimi-code-win32-x64.zip",
+      "hash": "270882a8d22958223384737754edde8b670cb2b0559a643eb33ce26b9304f26a"
+    },
+    "arm64": {
+      "url": "https://github.com/MoonshotAI/kimi-code/releases/download/%40moonshot-ai/kimi-code%400.26.0/kimi-code-win32-arm64.zip",
+      "hash": "70163ef51c1018cce14c82651fd8c087ea3c5a79c520e4aeff81deb6e81c8150"
+    }
+  },
+  "bin": [
+    [
+      "kimi.exe",
+      "kimi-code"
+    ]
+  ],
+  "checkver": {
+    "url": "https://api.github.com/repos/MoonshotAI/kimi-code/releases",
+    "regex": "@moonshot-ai/kimi-code@([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$version/kimi-code-win32-x64.zip",
+        "hash": {
+          "url": "$url.sha256"
+        }
+      },
+      "arm64": {
+        "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$version/kimi-code-win32-arm64.zip",
+        "hash": {
+          "url": "$url.sha256"
+        }
+      }
+    }
+  }
+}
