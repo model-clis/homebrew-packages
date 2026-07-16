@@ -24,8 +24,8 @@ jobs:
       - name: Validate generated files
         run: |
           python3 -m json.tool packages.json >/dev/null
-          python3 -m json.tool bucket/deepseek.json >/dev/null
-          ruby -c Formula/deepseek.rb
+          for f in bucket/*.json; do python3 -m json.tool "$f" >/dev/null; done
+          for f in Formula/*.rb; do ruby -c "$f"; done
       - name: Commit updates
         run: |
           if git diff --quiet; then

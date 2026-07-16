@@ -14,14 +14,22 @@ jobs:
       - uses: actions/checkout@v5
       - run: python3 scripts/update.py
       - run: git diff --exit-code
-      - run: python3 -m json.tool packages.json >/dev/null
-      - run: python3 -m json.tool bucket/deepseek.json >/dev/null
-      - run: ruby -c Formula/deepseek.rb
+      - name: Validate JSON
+        run: |
+          python3 -m json.tool packages.json >/dev/null
+          for f in bucket/*.json; do python3 -m json.tool "$f" >/dev/null; done
+      - name: Check Ruby syntax
+        run: |
+          for f in Formula/*.rb; do ruby -c "$f"; done
 
   homebrew:
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v5
-      - run: brew style Formula/deepseek.rb
+      - run: for f in Formula/*.rb; do brew style "$f"; done
       - run: brew tap model-clis/packages "$GITHUB_WORKSPACE"
-      - run: brew audit --strict model-clis/packages/deepseek
+      - name: Audit formulae
+        run: |
+          for f in Formula/*.rb; do
+            brew audit --strict "model-clis/packages/$(basename "$f" .rb)"
+          done
