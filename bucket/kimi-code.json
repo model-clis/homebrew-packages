@@ -16,7 +16,7 @@
   "bin": [
     [
       "kimi.exe",
-      "kimi-code"
+      "kimi"
     ]
   ],
   "checkver": {

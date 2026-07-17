@@ -23,7 +23,7 @@ scoop install model-clis/deepseek
 
 Scoop (Windows x64 / arm64), tracks the native Windows builds published on
 [MoonshotAI/kimi-code](https://github.com/MoonshotAI/kimi-code) releases and
-shims the bundled `kimi.exe` as `kimi-code`:
+exposes the bundled `kimi.exe` as the `kimi` command:
 
 ```powershell
 scoop bucket add model-clis https://github.com/model-clis/homebrew-packages
@@ -55,6 +55,7 @@ Package fields:
   newest matching tag instead of taking the repository's latest release.
 - `scoop_bin_source`: file to shim when the Scoop asset is an archive wrapping the
   binary (defaults to the x64 asset name itself).
+- `scoop_bin_name`: command name for the Scoop shim (defaults to the package name).
 - `checkver`: custom Scoop checkver block (defaults to `{"github": <homepage>}`).
 
 ## License

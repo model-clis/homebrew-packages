@@ -106,6 +106,7 @@ def write_scoop_manifest(name: str, package: dict[str, object], version: str,
     # x64 asset name itself, i.e. a bare executable; set `scoop_bin_source`
     # when the asset is an archive wrapping the binary.
     bin_source = str(package.get("scoop_bin_source") or scoop_assets["64bit"])
+    bin_name = str(package.get("scoop_bin_name") or name)
     scoop = {
         "version": version,
         "description": package["description"],
@@ -118,7 +119,7 @@ def write_scoop_manifest(name: str, package: dict[str, object], version: str,
             }
             for arch, asset in scoop_assets.items()
         },
-        "bin": [[bin_source, name]],
+        "bin": [[bin_source, bin_name]],
         "checkver": package.get("checkver") or {"github": package["homepage"]},
         "autoupdate": {
             "architecture": {

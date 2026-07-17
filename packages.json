@@ -16,6 +16,7 @@
     "license": "MIT",
     "tag_prefix": "@moonshot-ai/kimi-code@",
     "scoop_bin_source": "kimi.exe",
+    "scoop_bin_name": "kimi",
     "checkver": {
       "url": "https://api.github.com/repos/MoonshotAI/kimi-code/releases",
       "regex": "@moonshot-ai/kimi-code@([\\d.]+)"
