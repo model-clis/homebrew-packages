@@ -2,9 +2,9 @@
 class Deepseek < Formula
   desc "Stateless DeepSeek subagent CLI"
   homepage "https://github.com/model-clis/deepseek"
-  url "https://github.com/model-clis/deepseek/releases/download/v2026.726.0/deepseek-macos-aarch64"
-  version "2026.726.0"
-  sha256 "8de4b4e912373dea1a15f8bb03bfedff47bdf7ebb8d33f620ffe5e8c8b541e42"
+  url "https://github.com/model-clis/deepseek/releases/download/v2026.813.0/deepseek-macos-aarch64"
+  version "2026.813.0"
+  sha256 "30594d6935e8ed9a1a4c273388281a30b16b964a070b25e84b4f9f7153a8249c"
   license "MIT"
 
   depends_on arch: :arm64
