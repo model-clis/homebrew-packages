@@ -3,7 +3,6 @@ class Jev < Formula
   desc "Typed judgment CLI for the Jev model"
   homepage "https://github.com/model-clis/jev"
   url "https://github.com/model-clis/jev/releases/download/v2026.919.0/jev-macos-aarch64"
-  version "2026.919.0"
   sha256 "b407275845732cf5fa791437ba5b0185fd6dcb411bec16f3d733c7b02f991c42"
   license "MIT"
 
