@@ -9,6 +9,16 @@
       "scoop": "deepseek-windows-x86_64.exe"
     }
   },
+  "jev": {
+    "repository": "model-clis/jev",
+    "description": "Typed judgment CLI for the Jev model",
+    "homepage": "https://github.com/model-clis/jev",
+    "license": "MIT",
+    "assets": {
+      "homebrew": "jev-macos-aarch64",
+      "scoop": "jev-windows-x86_64.exe"
+    }
+  },
   "kimi-code": {
     "repository": "MoonshotAI/kimi-code",
     "description": "AI coding agent for your terminal",

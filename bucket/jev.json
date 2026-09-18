@@ -1,0 +1,31 @@
+{
+  "version": "2026.919.0",
+  "description": "Typed judgment CLI for the Jev model",
+  "homepage": "https://github.com/model-clis/jev",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/model-clis/jev/releases/download/v2026.919.0/jev-windows-x86_64.exe",
+      "hash": "2ee5f2e1707bed72cfc6f42eba72a1761df85263c1831fc532667d90acafaa2d"
+    }
+  },
+  "bin": [
+    [
+      "jev-windows-x86_64.exe",
+      "jev"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/model-clis/jev"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/model-clis/jev/releases/download/v$version/jev-windows-x86_64.exe",
+        "hash": {
+          "url": "$url.sha256"
+        }
+      }
+    }
+  }
+}
